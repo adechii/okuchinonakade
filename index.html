@@ -57,7 +57,8 @@
                 border-radius: 1em;
                 font-size: 1em;
                 padding: 0 0.5em;
-                margin: 0.5em 0;
+                margin: 0.5em auto;
+                display: block;
             }
             
             #voice.hi
@@ -173,7 +174,10 @@
     <body>
         <div id="main">
             <canvas id="canvas" width="128" height="128"></canvas>
-            <div id="voice"><input id="start" type="button" value="スタート"></div>
+            <div id="voice">
+                <input id="start" type="button" value="スタート">
+                おふとんメスドラさん の おくちのなかで、おもらしケモショタくん が がんばるよ！
+            </div>
             <div id="shiterukoto"></div>
             <div id="yameruniha"></div>
             <div id="omorashi"></div>
@@ -266,11 +270,11 @@
             [
                 {
                     charactor: 'hi',
-                    message: '僕はおもらしケモショタ。おふとんのメスドラさん、また会いに来たよ！',
+                    message: 'おもらしケモショタだよ。おふとんメスドラさん、また会いに来たよ！なめて！',
                 },
                 {
                     charactor: 'ho',
-                    message: 'おぬしも好きじゃのう。わしも大好きじゃ。それじゃ、いただきます！',
+                    message: '好きじゃのう。わしもおぬしの事が大好きじゃ。今回もめちゃくちゃにしてやるぞえ。それじゃ、いただきます！',
                 },
             ]
 
@@ -319,10 +323,10 @@
                     sugiru: 'なめらかすぎる',
                 },
                 {
-                    name: 'ゆっくり',
+                    name: 'ゆったり',
                     wait: 1200,
-                    te: 'ゆっくりで',
-                    sugiru: 'ゆっくりすぎる',
+                    te: 'ゆったりで',
+                    sugiru: 'ゆったりすぎる',
                 },
                 {
                     name: 'ねっとり',
@@ -357,7 +361,7 @@
                     name: 'もみしだく',
                     power: 1.5,
                     heart: 1.0,
-                    sound: 'もに',
+                    sound: 'もみゅ',
                     shi: 'もみしだき',
                     te: 'もみしだいて',
                     tara: 'もみしだいたら',
@@ -450,8 +454,8 @@
                     heart: 1.2,
                     sound: 'ぬぶ',
                     shi: 'ねぶりもみ',
-                    te: 'ねぶもんで',
-                    tara: 'ねぶもんだら',
+                    te: 'ねぶりもんで',
+                    tara: 'ねぶりもんだら',
                     x0: 1,
                     y0: 3,
                     x1: 3,
@@ -461,7 +465,7 @@
                     name: 'しぼる',
                     power: 1.6,
                     heart: 0.4,
-                    sound: 'にゅこ',
+                    sound: 'ぬぽ',
                     shi: 'しぼり',
                     te: 'しぼって',
                     tara: 'しぼったら',
@@ -474,7 +478,7 @@
                     name: 'しぼりだす',
                     power: 1.6,
                     heart: 0.4,
-                    sound: 'にゅぽ',
+                    sound: 'にゅこ',
                     shi: 'しぼりだし',
                     te: 'しぼりだして',
                     tara: 'しぼりだしたら',
@@ -502,6 +506,7 @@
             [
                 [
                     'あ',
+                    'や',
                 ],
                 [
                     'んあ',
@@ -559,7 +564,7 @@
             let kazu = ''
 
             let dare = ''
-            let kotoba = 'おふとんメスドラ の おくちのなかで、おもらしケモショタ が がんばるよ。画面をタッチしてね。'
+            let kotoba = ''
             let shiterukoto = ''
             let yameruJoken = ''
             let yameruKazu = ''
@@ -657,12 +662,12 @@
                                 if(j === 0)
                                 {
                                     joken = '回'
-                                    kazu = random(3) * 5 + 5
+                                    kazu = random(4) * 5 + 10
                                 }
                                 if(j === 1)
                                 {
                                     joken = '秒間'
-                                    kazu = random(5) * 5 + 5
+                                    kazu = random(4) * 5 + 10
                                 }
                                 randomMessage = random(8)
                                 nameTime = 0
@@ -687,7 +692,7 @@
                                 {
                                     kotoba =
                                         'さて、この肉厚ボリューム舌で '
-                                    time = 1000
+                                    time = 3000
                                     next++
                                 }
                                 else if(next === 1)
@@ -696,7 +701,7 @@
                                         haya[hayaNum].name + ' '
                                         kazu +
                                         joken + ' '
-                                    time = 1000
+                                    time = 3000
                                     next++
                                 }
                                 else if(next === 2)
@@ -704,7 +709,7 @@
                                     kotoba +=
                                         menu[menuNum].sound +
                                         menu[menuNum].sound + ' '
-                                    time = 1000
+                                    time = 3000
                                     next++
                                 }
                                 else if(next === 3)
@@ -722,7 +727,7 @@
                                 {
                                     kotoba =
                                         'さて、かわいいケモショタくんの前面を '
-                                    time = 1000
+                                    time = 3000
                                     next++
                                 }
                                 else if(next === 1)
@@ -732,7 +737,7 @@
                                         menu[menuNum].sound +
                                         menu[menuNum].sound +
                                         menu[menuNum].sound + ' '
-                                    time = 1000
+                                    time = 3000
                                     next++
                                 }
                                 else if(next === 2)
@@ -741,7 +746,7 @@
                                         kazu +
                                         joken + ' '
                                         haya[hayaNum].name + ' '
-                                    time = 1000
+                                    time = 3000
                                     next++
                                 }
                                 else if(next === 3)
@@ -759,16 +764,16 @@
                                 {
                                     kotoba =
                                         'さて、きもちいきもちい '
-                                    time = 1000
+                                    time = 3000
                                     next++
                                 }
                                 else if(next === 1)
                                 {
                                     kotoba +=
                                         menu[menuNum].sound +
-                                        menu[menuNum].sound +
-                                        menu[menuNum].shi + 'を '
-                                    time = 1000
+                                        menu[menuNum].sound + ' '
+                                        menu[menuNum].shi + ' を '
+                                    time = 3000
                                     next++
                                 }
                                 else if(next === 2)
@@ -777,7 +782,7 @@
                                         haya[hayaNum].name + ' ' +
                                         kazu +
                                         joken + 'じゃ。'
-                                    time = 1000
+                                    time = 3000
                                     next++
                                 }
                                 else if(next === 3)
@@ -793,10 +798,10 @@
                                 if(next === 0)
                                 {
                                     kotoba =
-                                        'さて、'
+                                        'さて、' +
                                         kazu +
                                         joken + ' '
-                                    time = 1000
+                                    time = 3000
                                     next++
                                 }
                                 else if(next === 1)
@@ -804,16 +809,16 @@
                                     kotoba +=
                                         haya[hayaNum].name + ' '
                                         'おぬしの前面を '
-                                    time = 1000
+                                    time = 3000
                                     next++
                                 }
                                 else if(next === 2)
                                 {
                                     kotoba +=
                                         menu[menuNum].sound +
-                                        menu[menuNum].sound +
-                                        menu[menuNum].te + 'やったら '
-                                    time = 1000
+                                        menu[menuNum].sound + ' '
+                                        menu[menuNum].te + ' やったら '
+                                    time = 3000
                                     next++
                                 }
                                 else if(next === 3)
@@ -832,15 +837,15 @@
                                         'さて。 ' +
                                         menu[menuNum].sound +
                                         menu[menuNum].sound +
-                                        menu[menuNum].sound + 'と '
-                                    time = 1000
+                                        menu[menuNum].sound + ' と '
+                                    time = 3000
                                     next++
                                 }
                                 else if(next === 1)
                                 {
                                     kotoba += 
                                         menu[menuNum].name + 'ぞえ。 '
-                                    time = 1000
+                                    time = 3000
                                     next++
                                 }
                                 else if(next === 2)
@@ -848,7 +853,7 @@
                                     kotoba +=
                                         kazu +
                                         joken + 'じゃ。 '
-                                    time = 1000
+                                    time = 3000
                                     next++
                                 }
                                 else if(next === 3)
@@ -866,14 +871,14 @@
                                     kotoba =
                                         'さてさて、舌で ' +
                                         menu[menuNum].name + 'ぞえ。 '
-                                    time = 1000
+                                    time = 3000
                                     next++
                                 }
                                 else if(next === 1)
                                 {
                                     kotoba += 
-                                        haya[hayaNum].sugiru + 'からの。'
-                                    time = 1000
+                                        '言っとくが' + haya[hayaNum].name + 'やるからの。'
+                                    time = 3000
                                     next++
                                 }
                                 else if(next === 2)
@@ -881,7 +886,7 @@
                                     kotoba +=
                                         kazu +
                                         joken + 'じゃぞ。'
-                                    time = 1000
+                                    time = 3000
                                     next++
                                 }
                                 else if(next === 3)
@@ -899,24 +904,24 @@
                                     kotoba =
                                         'さて、かわいいかわいいケモショタくんを舌で '
                                         menu[menuNum].name + 'ぞえ。 '
-                                        time = 1000
+                                        time = 3000
                                     next++
                                 }
                                 else if(next === 1)
                                 {
                                     kotoba += 
                                         menu[menuNum].sound +
-                                        menu[menuNum].sound + 
+                                        menu[menuNum].sound + ' '
                                         kazu +
                                         joken + '、'
-                                    time = 1000
+                                    time = 3000
                                     next++
                                 }
                                 else if(next === 2)
                                 {
                                     kotoba +=
                                         '舌使いが' + haya[hayaNum].te + '、'
-                                    time = 1000
+                                    time = 3000
                                     next++
                                 }
                                 else if(next === 3)
@@ -934,7 +939,7 @@
                                     kotoba =
                                         'さて、このおふとん舌を使った '
                                         menu[menuNum].shi + 'じゃ。 '
-                                        time = 1000
+                                        time = 3000
                                     next++
                                 }
                                 else if(next === 1)
@@ -943,15 +948,15 @@
                                         kazu +
                                         joken + 
                                         haya[hayaNum].sugiru + '舌使いで、'
-                                    time = 1000
+                                    time = 3000
                                     next++
                                 }
                                 else if(next === 2)
                                 {
                                     kotoba +=
                                         menu[menuNum].sound +
-                                        menu[menuNum].sound
-                                    time = 1000
+                                        menu[menuNum].sound + ' '
+                                    time = 3000
                                     next++
                                 }
                                 else if(next === 3)
@@ -968,7 +973,15 @@
                         {
                             if(next === 0)
                             {
-                                shiterukoto = '「'+ menu[menuNum].name + '」'
+                                const r = random(4)
+                                if(r === 0)
+                                    shiterukoto = menu[menuNum].sound + menu[menuNum].sound + ' ' + haya[hayaNum].name + ' ' + menu[menuNum].name
+                                if(r === 1)
+                                    shiterukoto = haya[hayaNum].name + ' ' + menu[menuNum].sound + menu[menuNum].sound + ' ' + menu[menuNum].name
+                                if(r === 2)
+                                    shiterukoto = haya[hayaNum].name + haya[hayaNum].name + ' ' + menu[menuNum].name
+                                if(r === 3)
+                                    shiterukoto = menu[menuNum].sound + menu[menuNum].sound + menu[menuNum].sound + menu[menuNum].sound + ' ' + menu[menuNum].name
                                 yameruJoken = joken
                                 yameruKazu = kazu
                             }
@@ -1059,6 +1072,7 @@
                                     'とろけちゃう',
                                     'もれちゃうう',
                                     'もれるううう',
+                                    'もれゆううう',
                                 ]
                                 d = damee[random(damee.length)]
                             }
@@ -1079,6 +1093,7 @@
                                     'とろけちゃう',
                                     'もれちゃうう',
                                     'もれるううう',
+                                    'もれゆううう',
                                 ]
 
                                 d = menu[menuNum].tara + damee[random(damee.length)]
@@ -1106,6 +1121,7 @@
                                     'したらとろけちゃう',
                                     'したらもれちゃうう',
                                     'したらもれるううう',
+                                    'したらもれゆううう',
                                 ]
 
                                 d = menu[menuNum].sound + menu[menuNum].sound + damee[random(damee.length)]
@@ -1131,6 +1147,7 @@
                                     'とろけちゃう',
                                     'もれちゃうう',
                                     'もれるううう',
+                                    'もれゆううう',
                                 ]
                                 d = menu[menuNum].shi + 'かた' + haya[hayaNum].te + damee[random(damee.length)]
                             }
@@ -1151,12 +1168,13 @@
                                     'とろけちゃう',
                                     'もれちゃうう',
                                     'もれるううう',
+                                    'もれゆううう',
                                 ]
                                 d = haya[hayaNum].te + damee[random(damee.length)]
                             }
                             else if(randomMessage === 7)
                             {
-                                d = menu[menuNum].sound + menu[menuNum].sound + haya[hayaNum].sugiru + 'よう'
+                                d = menu[menuNum].sound + menu[menuNum].sound + haya[hayaNum].sugiru + 'ようう'
                             }
 
                             kotoba = d + '！'
