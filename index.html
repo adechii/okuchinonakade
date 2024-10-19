@@ -1104,7 +1104,7 @@
 
                             dare = 'hi'
                             const k = kotoba + aegigoe + matsubi
-                            if(next === 0 || k.length > 96)
+                            if(next === 0 || k.length > 100)
                                 kotoba = aegigoe + matsubi
                             else
                                 kotoba = k
@@ -1568,42 +1568,82 @@
                             yameruKazu = ''
                             nameTime = 0
                             time = 5000
-                            next = 0
-                            dare = 'hi'
-                            if(randomMessage === 0)
-                            {
-                                kotoba = 'はげしく もむとか やめてええ…。'
-                            }
-                            else if(randomMessage === 1)
-                            {
-                                kotoba = 'あっさくとかもうやめてえ…。'
-                            }
-                            else if(randomMessage === 2)
-                            {
-                                kotoba = 'しゃぶり もまれるの きもちよすぎ…。'
-                            }
-                            else if(randomMessage === 3)
-                            {
-                                kotoba = 'しぼりだされるの きもちよすぎて こえでちゃうう…。'
-                            }
-                            else if(randomMessage === 4)
-                            {
-                                kotoba = 'きもちよすぎて がまんできないよう…。'
-                            }
-                            else if(randomMessage === 5)
-                            {
-                                kotoba = 'ねっとり しすぎてて きもちよすぎた…。'
-                            }
-                            else if(randomMessage === 6)
-                            {
-                                kotoba = 'しごくの はやすぎて からだ こわれゆうう…。'
-                            }
-                            else if(randomMessage === 7)
-                            {
-                                kotoba = 'ひ、ひいいいいい、おもらし しぼりぬかれた…。'
-                            }
 
-                            junban = 'shiteyarou'
+                            if(next === 0)
+                            {
+                                dare = 'ho'
+                                if(randomMessage === 0)
+                                {
+                                    kotoba = '激しく揉まれる気分はどうじゃったかの。'
+                                }
+                                else if(randomMessage === 1)
+                                {
+                                    kotoba = '圧搾、気持ちよかったかの。'
+                                }
+                                else if(randomMessage === 2)
+                                {
+                                    kotoba = 'しゃぶり揉んだら、おいしかったぞえ。'
+                                }
+                                else if(randomMessage === 3)
+                                {
+                                    kotoba = '相変わらずいい声じゃったぞ。'
+                                }
+                                else if(randomMessage === 4)
+                                {
+                                    kotoba = 'あまり我慢しないようにの。'
+                                }
+                                else if(randomMessage === 5)
+                                {
+                                    kotoba = 'どうじゃ、ねっとり優しかったじゃろ。'
+                                }
+                                else if(randomMessage === 6)
+                                {
+                                    kotoba = '思い切り速いのもいいじゃろう。'
+                                }
+                                else if(randomMessage === 7)
+                                {
+                                    kotoba = '搾り抜きのこわさがわかったかえ。'
+                                }
+                            }else if(next === 1){
+                                dare = 'hi'
+                                if(randomMessage === 0)
+                                {
+                                    kotoba = 'きもちよかったああ…。'
+                                }
+                                else if(randomMessage === 1)
+                                {
+                                    kotoba = 'もう あっさく しないでええ…。'
+                                }
+                                else if(randomMessage === 2)
+                                {
+                                    kotoba = 'しゃぶり もまれるの きもちよすぎ…。'
+                                }
+                                else if(randomMessage === 3)
+                                {
+                                    kotoba = 'しぼりだされるの きもちよすぎて こえでちゃうう…。'
+                                }
+                                else if(randomMessage === 4)
+                                {
+                                    kotoba = 'きもちよすぎて がまんできないよう…。'
+                                }
+                                else if(randomMessage === 5)
+                                {
+                                    kotoba = 'ねっとり しすぎてて きもちよすぎた…。'
+                                }
+                                else if(randomMessage === 6)
+                                {
+                                    kotoba = 'しごくの はやすぎて からだ こわれゆうう…。'
+                                }
+                                else if(randomMessage === 7)
+                                {
+                                    kotoba = 'ひ、ひいいいいい、おもらし しぼりぬかれた…。'
+                                }
+                            }else{
+                                junban = 'shiteyarou'
+                                time = 0
+                                next = -1
+                            }
+                            next++
                         }
                     }
                 }
@@ -1711,7 +1751,7 @@
                         }
                         else
                         {
-                            sound(50, time / 4000, 500)
+                            sound(40, time / 4000, 400)
                         }
                     }
                 }
