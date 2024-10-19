@@ -698,7 +698,7 @@
                                 else if(next === 1)
                                 {
                                     kotoba +=
-                                        haya[hayaNum].name + ' '
+                                        haya[hayaNum].name + ' ' +
                                         kazu +
                                         joken + ' '
                                     time = 3000
@@ -744,7 +744,7 @@
                                 {
                                     kotoba +=
                                         kazu +
-                                        joken + ' '
+                                        joken + ' ' +
                                         haya[hayaNum].name + ' '
                                     time = 3000
                                     next++
@@ -771,7 +771,7 @@
                                 {
                                     kotoba +=
                                         menu[menuNum].sound +
-                                        menu[menuNum].sound + ' '
+                                        menu[menuNum].sound + ' ' +
                                         menu[menuNum].shi + ' を '
                                     time = 3000
                                     next++
@@ -807,7 +807,7 @@
                                 else if(next === 1)
                                 {
                                     kotoba +=
-                                        haya[hayaNum].name + ' '
+                                        haya[hayaNum].name + ' ' +
                                         'おぬしの前面を '
                                     time = 3000
                                     next++
@@ -816,7 +816,7 @@
                                 {
                                     kotoba +=
                                         menu[menuNum].sound +
-                                        menu[menuNum].sound + ' '
+                                        menu[menuNum].sound + ' ' +
                                         menu[menuNum].te + ' やったら '
                                     time = 3000
                                     next++
@@ -869,8 +869,9 @@
                                 if(next === 0)
                                 {
                                     kotoba =
-                                        'さてさて、舌で ' +
-                                        menu[menuNum].name + 'ぞえ。 '
+                                        'さて、かわいいかわいいケモショタくんを舌で ' +
+                                        menu[menuNum].name +
+                                        ' ぞえ。'
                                     time = 3000
                                     next++
                                 }
@@ -892,7 +893,7 @@
                                 else if(next === 3)
                                 {
                                     kotoba +=
-                                        'かわいく鳴いても容赦はせんぞ。'
+                                        'かわいく鳴いても容赦はせんからの。'
                                     time = 5000
                                     junban = 'namerare'
                                     next = 0
@@ -902,8 +903,8 @@
                                 if(next === 0)
                                 {
                                     kotoba =
-                                        'さて、かわいいかわいいケモショタくんを舌で '
-                                        menu[menuNum].name + 'ぞえ。 '
+                                        'さて、舌でを使って ' +
+                                        menu[menuNum].name + 'ぞえ。'
                                         time = 3000
                                     next++
                                 }
@@ -937,7 +938,7 @@
                                 if(next === 0)
                                 {
                                     kotoba =
-                                        'さて、このおふとん舌を使った '
+                                        'さて、このふかふかおふとん舌を使った '
                                         menu[menuNum].shi + 'じゃ。 '
                                         time = 3000
                                     next++
@@ -975,13 +976,13 @@
                             {
                                 const r = random(4)
                                 if(r === 0)
-                                    shiterukoto = menu[menuNum].sound + menu[menuNum].sound + ' ' + haya[hayaNum].name + ' ' + menu[menuNum].name
+                                    shiterukoto = menu[menuNum].sound + menu[menuNum].sound + haya[hayaNum].name  + menu[menuNum].name
                                 if(r === 1)
-                                    shiterukoto = haya[hayaNum].name + ' ' + menu[menuNum].sound + menu[menuNum].sound + ' ' + menu[menuNum].name
+                                    shiterukoto = haya[hayaNum].name  + menu[menuNum].sound + menu[menuNum].sound + menu[menuNum].name
                                 if(r === 2)
-                                    shiterukoto = haya[hayaNum].name + haya[hayaNum].name + ' ' + menu[menuNum].name
+                                    shiterukoto = haya[hayaNum].name + haya[hayaNum].name  + menu[menuNum].name
                                 if(r === 3)
-                                    shiterukoto = menu[menuNum].sound + menu[menuNum].sound + menu[menuNum].sound + menu[menuNum].sound + ' ' + menu[menuNum].name
+                                    shiterukoto = menu[menuNum].sound + menu[menuNum].sound + menu[menuNum].sound + menu[menuNum].sound + menu[menuNum].name
                                 yameruJoken = joken
                                 yameruKazu = kazu
                             }
