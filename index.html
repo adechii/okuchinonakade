@@ -55,7 +55,7 @@
                 color: #FCC;
                 border-style: none;
                 border-radius: 1em;
-                font-size: 2em;
+                font-size: 1em;
                 padding: 0 0.5em;
                 margin: 0.5em auto;
                 display: block;
@@ -176,7 +176,7 @@
             <canvas id="canvas" width="128" height="128"></canvas>
             <div id="voice">
                 おふとんメスドラさん の おくちのなかで、おもらしケモショタくん が がんばるよ！
-                <input id="start" type="button" value="スタート">
+                <input id="start" type="button" value="おくちに いれてもらう">
             </div>
             <div id="shiterukoto"></div>
             <div id="yameruniha"></div>
@@ -248,6 +248,8 @@
                 startButton.className = 'none'
 
                 phase = 'start'
+
+                //junban = 'yorimichi'
             }
 
             let phase = 'title'
@@ -274,7 +276,7 @@
                 },
                 {
                     charactor: 'ho',
-                    message: '好きじゃのう。わしもおぬしの事が大好きじゃ。今回もこの舌でめちゃくちゃにしてやるぞえ。それじゃ、いただきます！',
+                    message: 'おぬしも好きじゃのう。わしもおぬしの事が大好きじゃ。今回もこの舌でめちゃくちゃにしてやるぞえ。それじゃ、いただきます！',
                 },
             ]
 
@@ -372,7 +374,7 @@
                     name: 'もむ',
                     power: 1.0,
                     heart: 1.0,
-                    sound: 'もにゅ',
+                    sound: 'もぎゅ',
                     shi: 'もみ',
                     te: 'もんで',
                     tara: 'もんだら',
@@ -437,7 +439,7 @@
                     name: 'こねる',
                     power: 0.6,
                     heart: 0.6,
-                    sound: 'ねり',
+                    sound: 'こね',
                     shi: 'こね',
                     te: 'こねて',
                     tara: 'こねたら',
@@ -450,7 +452,7 @@
                     name: 'こねくりまわす',
                     power: 1.8,
                     heart: 1.8,
-                    sound: 'こね',
+                    sound: 'ねり',
                     shi: 'こねくりまわし',
                     te: 'こねくりまわして',
                     tara: 'こねくりまわしたら',
@@ -463,7 +465,7 @@
                     name: 'ねぶる',
                     power: 0.6,
                     heart: 1.2,
-                    sound: 'ぬぷ',
+                    sound: 'ねぶ',
                     shi: 'ねぶり',
                     te: 'ねぶって',
                     tara: 'ねぶったら',
@@ -489,7 +491,7 @@
                     name: 'しゃぶる',
                     power: 1.2,
                     heart: 1.2,
-                    sound: 'にゅむ',
+                    sound: 'にゅぷ',
                     shi: 'しゃぶり',
                     te: 'しゃぶって',
                     tara: 'しゃぶったら',
@@ -502,7 +504,7 @@
                     name: 'しぼる',
                     power: 1.6,
                     heart: 0.4,
-                    sound: 'ぬぽ',
+                    sound: 'にゅこ',
                     shi: 'しぼり',
                     te: 'しぼって',
                     tara: 'しぼったら',
@@ -515,7 +517,7 @@
                     name: 'しぼりだす',
                     power: 1.6,
                     heart: 0.4,
-                    sound: 'にゅこ',
+                    sound: 'ぬこ',
                     shi: 'しぼりだし',
                     te: 'しぼりだして',
                     tara: 'しぼりだしたら',
@@ -528,7 +530,7 @@
                     name: 'つぶす',
                     power: 1.4,
                     heart: 0.6,
-                    sound: 'もぬ',
+                    sound: 'ぬぶ',
                     shi: 'つぶし',
                     te: 'つぶして',
                     tara: 'つぶしたら',
@@ -542,54 +544,63 @@
             const aegi = 
             [
                 [
-                    'あ',
-                    'や',
-                ],
-                [
+                    'ああ',
                     'んあ',
                     'あん',
-                    'ひあ',
-                    'やあ',
-                    'やん',
-                    'いや',
-                    'だめ',
-                    'やめ',
+                    'あ',
                 ],
                 [
+                    'あああ',
                     'んああ',
                     'あんん',
-                    'んいい',
-                    'いやん',
-                    'いやあ',
-                    'やあん',
-                    'だめえ',
-                    'やめて',
+                    'ああ',
+                    'んあ',
+                    'あん',
+                    'あ',
                 ],
                 [
+                    'ああああ',
+                    'んあああ',
+                    'あんんん',
+                    'あああ',
+                    'んああ',
+                    'あんん',
+                    'ああ',
+                    'んあ',
+                    'あん',
+                ],
+                [
+                    'あああああ',
+                    'んああああ',
+                    'あんんんん',
+                    'ああああ',
                     'んやああ',
                     'あんんん',
-                    'んいいい',
-                    'いやあん',
-                    'だめええ',
-                    'やめてえ',
+                    'あああ',
+                    'んああ',
+                    'あんん',
                 ],
                 [
-                    'んやあああ',
-                    'んいいいい',
-                    'ああああん',
-                    'あんんんん',
-                    'いやああん',
-                    'だめえええ',
-                    'やめてええ',
-                ],
-                [
-                    'んやああああ',
-                    'んいいいいい',
-                    'あああああん',
+                    'ああああああ',
+                    'んあああああ',
                     'あんんんんん',
-                    'いやあああん',
-                    'だめええええ',
-                    'やめてえええ',
+                    'あああああ',
+                    'んああああ',
+                    'あんんんん',
+                    'ああああ',
+                    'んあああ',
+                    'あんんん',
+                ],
+                [
+                    'あああああああ',
+                    'んああああああ',
+                    'あんんんんんん',
+                    'ああああああ',
+                    'んあああああ',
+                    'あんんんんん',
+                    'あああああ',
+                    'んああああ',
+                    'あんんんん',
                 ],
             ]
 
@@ -750,6 +761,64 @@
                                 drawHo(1, 4 + 2)
                             else
                                 drawHo(3, 4 + 2)
+                        }
+
+                        if(randomMessage === 8)
+                        {
+                            if(nameTime < 0.5)
+                                drawHo(1, 0 + 3)
+                            else
+                                drawHo(3, 0 + 1)
+                        }
+
+                        if(randomMessage === 9)
+                        {
+                            if(nameTime < 0.5)
+                                drawHo(1, 4 + 3)
+                            else
+                                drawHo(3, 4 + 1)
+                        }
+                        if(randomMessage === 10)
+                        {
+                            if(nameTime < 0.5)
+                                drawHo(2, 0 + 3)
+                            else
+                                drawHo(2, 0 + 1)
+                        }
+                        if(randomMessage === 11)
+                        {
+                            if(nameTime < 0.5)
+                                drawHo(3, 4 + 2)
+                            else
+                                drawHo(1, 4 + 2)
+                        }
+                        if(randomMessage === 12)
+                        {
+                            if(nameTime < 0.5)
+                                drawHo(3, 0 + 2)
+                            else
+                                drawHo(1, 0 + 2)
+                        }
+                        if(randomMessage === 13)
+                        {
+                            if(nameTime < 0.5)
+                                drawHo(3, 4 + 1)
+                            else
+                                drawHo(1, 4 + 3)
+                        }
+                        if(randomMessage === 14)
+                        {
+                            if(nameTime < 0.5)
+                                drawHo(3, 0 + 1)
+                            else
+                                drawHo(1, 0 + 3)
+                        }
+                        if(randomMessage === 15)
+                        {
+                            if(nameTime < 0.5)
+                                drawHo(2, 4 + 3)
+                            else
+                                drawHo(2, 4 + 1)
                         }
                     }
                     if(time < 0) 
@@ -999,7 +1068,7 @@
                                 else if(next === 3)
                                 {
                                     kotoba +=
-                                        'かわいく鳴いても容赦はせんからの。'
+                                        'どんなにかわいく鳴いても容赦はせんからの。'
                                     time = 5000
                                     junban = 'namerare'
                                     next = 0
@@ -1176,6 +1245,7 @@
                                     'もれるううう',
                                     'もれゆううう',
                                     'んひいいいい',
+                                    'ひいいいいい',
                                 ]
                                 d = damee[random(damee.length)]
                             }
@@ -1198,6 +1268,7 @@
                                     'もれるううう',
                                     'もれゆううう',
                                     'んひいいいい',
+                                    'ひいいいいい',
                                 ]
 
                                 d = menu[menuNum].tara + damee[random(damee.length)]
@@ -1298,26 +1369,89 @@
                             junban = 'oshioki'
                             nameTime = 0
                             next = 0
-                            dare = 'ho'
                             halfTime = 500
 
-                            randomMessage = random(8)
+                            randomMessage = random(16)
                             if(randomMessage === 0)
+                            {
+                                dare = 'ho'
                                 kotoba = 'なんか いつもよりもれにくいのう、しばらく激しく揉んでやるぞえ。'
+                            }
                             if(randomMessage === 1)
+                            {
+                                dare = 'ho'
                                 kotoba = '貯まってそうじゃの。舌で3回だけ強く圧搾して たっぷりもらさせてやろう。'
+                            }
                             if(randomMessage === 2)
+                            {
+                                dare = 'ho'
                                 kotoba = 'おもらしの量が多すぎるわ。お仕置きで激しくしゃぶり揉んでやろう。'
+                            }
                             if(randomMessage === 3)
+                            {
+                                dare = 'ho'
                                 kotoba = 'いい声じゃ。舌で搾り出すようにするから、もっと喘ぎ鳴いてくれないかの。'
+                            }
                             if(randomMessage === 4)
+                            {
+                                dare = 'ho'
                                 kotoba = '我慢のしすぎじゃ。むりやり もらさせてやろう。強い力でにゅっこにゅこ搾り出してやるからの。'
+                            }
                             if(randomMessage === 5)
+                            {
+                                dare = 'ho'
                                 kotoba = '快楽がまだまだ足りなそうじゃのう。優しくねっとり舐めてやるから、気持ちよくもらしなさい。'
+                            }
                             if(randomMessage === 6)
+                            {
+                                dare = 'ho'
                                 kotoba = 'もっと大量におもらしをしなさい。思い切り速く しこしこ しこしこ しごいてやるからの。'
+                            }
                             if(randomMessage === 7)
+                            {
+                                dare = 'ho'
                                 kotoba = '我慢して貯まっておるのう。1回だけとても強く搾り抜いてあげるのじゃ。気持ちよくて叫んじゃうかもの。'
+                            }
+                            if(randomMessage === 8)
+                            {
+                                dare = 'ho'
+                                kotoba = '厳しそうそうじゃの。たまには やさしくねぶってやろう。なに、遠慮は要らん。'
+                            }
+                            if(randomMessage === 9)
+                            {
+                                dare = 'ho'
+                                kotoba = '厳しそうそうじゃな。たまに ゆっくりこすってやろう。なに、遠慮は要らんて。'
+                            }
+                            if(randomMessage === 10)
+                            {
+                                dare = 'hi'
+                                kotoba = 'ううう、デブ なメスドラさんの口の中だからきつい…。'
+                            }
+                            if(randomMessage === 11)
+                            {
+                                dare = 'hi'
+                                kotoba = 'もっとやさしくしてよう、デブ なメスドラさん…。'
+                            }
+                            if(randomMessage === 12)
+                            {
+                                dare = 'hi'
+                                kotoba = 'むっちむちの デブ なメスドラさんの中だから きもちよすぎる…。'
+                            }
+                            if(randomMessage === 13)
+                            {
+                                dare = 'hi'
+                                kotoba = 'デブ なメスドラさんの口の中で なめられるの最高…。'
+                            }
+                            if(randomMessage === 14)
+                            {
+                                dare = 'hi'
+                                kotoba = 'メスドラさん デブ だから 口の中むっちむちで なめられるのきもちい…本当にデブだよう。'
+                            }
+                            if(randomMessage === 15)
+                            {
+                                dare = 'hi'
+                                kotoba = 'メスドラさん デブ だから口の中 きゅうくつ… デブ すぎる…。'
+                            }
 
                             kakudo = randomMessage % 2
 
@@ -1342,7 +1476,7 @@
 
                                 if(randomMessage === 1)
                                 {
-                                    shiterukoto = 'たまってるからあっさくする'
+                                    shiterukoto = 'たまっているのであっさくする'
                                     yameruJoken = '回'
                                     yameruKazu = 3
                                 }
@@ -1382,6 +1516,55 @@
                                     yameruJoken = '回'
                                     yameruKazu = 1
                                 }
+                                if(randomMessage === 8)
+                                {
+                                    shiterukoto = 'やさしく？ねぶる'
+                                    yameruJoken = '回'
+                                    yameruKazu = 10
+                                }
+
+                                if(randomMessage === 9)
+                                {
+                                    shiterukoto = 'ゆっくり？こする'
+                                    yameruJoken = '回'
+                                    yameruKazu = 10
+                                }
+                                if(randomMessage === 10)
+                                {
+                                    shiterukoto = 'おしおきでおもいきりもむ'
+                                    yameruJoken = '回'
+                                    yameruKazu = 25
+                                }
+                                if(randomMessage === 11)
+                                {
+                                    shiterukoto = 'おしおきでつよくしごく'
+                                    yameruJoken = '回'
+                                    yameruKazu = 30
+                                }
+                                if(randomMessage === 12)
+                                {
+                                    shiterukoto = 'おしおきではげしくしぼる'
+                                    yameruJoken = '回'
+                                    yameruKazu = 25
+                                }
+                                if(randomMessage === 13)
+                                {
+                                    shiterukoto = 'おしおきでぬぷぬぷねぶる'
+                                    yameruJoken = '回'
+                                    yameruKazu = 20
+                                }
+                                if(randomMessage === 14)
+                                {
+                                    shiterukoto = 'おしおきでねっとりこねる'
+                                    yameruJoken = '回'
+                                    yameruKazu = 10
+                                }
+                                if(randomMessage === 15)
+                                {
+                                    shiterukoto = 'おしおきでおもいきりつよくつぶす'
+                                    yameruJoken = '回'
+                                    yameruKazu = 1
+                                }
                                 kotoba = ''
                             }
 
@@ -1399,7 +1582,7 @@
                                     {
                                         junban = 'jigo'
                                         time = 0
-                                        next = 0
+                                        next = -1
                                         kotoba = ''
                                         yameruKazu = 0
                                     }
@@ -1418,7 +1601,7 @@
                                     {
                                         junban = 'jigo'
                                         time = 0
-                                        next = 0
+                                        next = -1
                                         kotoba = ''
                                         yameruKazu = 0
                                     }
@@ -1431,13 +1614,13 @@
                                     kotoba += 'あ！'
                                     kimochiyosa += 2
                                     omorashi -= kimochiyosa / 1000 * 2
-                                    time = 400
+                                    time = 500
                                     halfTime = time * 1 / 3
                                     if(0 >= yameruKazu)
                                     {
                                         junban = 'jigo'
                                         time = 0
-                                        next = 0
+                                        next = -1
                                         kotoba = ''
                                         yameruKazu = 0
                                     }
@@ -1456,7 +1639,7 @@
                                     {
                                         junban = 'jigo'
                                         time = 0
-                                        next = 0
+                                        next = -1
                                         kotoba = ''
                                         yameruKazu = 0
                                     }
@@ -1466,7 +1649,7 @@
                                 }
                                 if(randomMessage === 4)
                                 {
-                                    kotoba += 'んやああ！'
+                                    kotoba += 'んああ！'
                                     kimochiyosa += 3
                                     omorashi -= kimochiyosa / 1000 * 4
                                     time = 1000
@@ -1475,7 +1658,7 @@
                                     {
                                         junban = 'jigo'
                                         time = 0
-                                        next = 0
+                                        next = -1
                                         kotoba = ''
                                         yameruKazu = 0
                                     }
@@ -1485,16 +1668,16 @@
                                 }
                                 if(randomMessage === 5)
                                 {
-                                    kotoba += 'あああん！'
+                                    kotoba += 'あんんん！'
                                     kimochiyosa += 4
                                     omorashi -= kimochiyosa / 1000 * 3
                                     time = 1800
-                                    halfTime = time * 1 / 3
+                                    halfTime = time * 1 / 2
                                     if(0 >= yameruKazu)
                                     {
                                         junban = 'jigo'
                                         time = 0
-                                        next = 0
+                                        next = -1
                                         kotoba = ''
                                         yameruKazu = 0
                                     }
@@ -1513,7 +1696,7 @@
                                     {
                                         junban = 'jigo'
                                         time = 0
-                                        next = 0
+                                        next = -1
                                         kotoba = ''
                                         yameruKazu = 0
                                     }
@@ -1532,12 +1715,164 @@
                                     {
                                         junban = 'jigo'
                                         time = 0
-                                        next = 0
+                                        next = -1
                                         kotoba = ''
                                         yameruKazu = 0
                                     }
                                     else
                                         sound(10, time / 8000, 100)
+                                    yameruKazu--
+                                }
+                                if(randomMessage === 8)
+                                {
+                                    kotoba += 'あんん！'
+                                    kimochiyosa += 1
+                                    omorashi -= kimochiyosa / 1000 * 1
+                                    time = 1600
+                                    halfTime = time * 1 / 4
+                                    if(0 >= yameruKazu)
+                                    {
+                                        junban = 'jigo'
+                                        time = 0
+                                        next = -1
+                                        kotoba = ''
+                                        yameruKazu = 0
+                                    }
+                                    else
+                                        sound(20, time / 8000, 200)
+                                    yameruKazu--
+                                }
+                                if(randomMessage === 9)
+                                {
+                                    kotoba += 'んああ！'
+                                    kimochiyosa += 1
+                                    omorashi -= kimochiyosa / 1000 * 1
+                                    time = 1400
+                                    halfTime = time * 1 / 4
+                                    if(0 >= yameruKazu)
+                                    {
+                                        junban = 'jigo'
+                                        time = 0
+                                        next = -1
+                                        kotoba = ''
+                                        yameruKazu = 0
+                                    }
+                                    else
+                                        sound(30, time / 8000, 300)
+                                    yameruKazu--
+                                }
+                                if(randomMessage === 10)
+                                {
+                                    kotoba += 'あん！'
+                                    kimochiyosa += 1
+                                    omorashi -= kimochiyosa / 1000 * 1
+                                    time = 400
+                                    halfTime = time * 1 / 4
+                                    if(0 >= yameruKazu)
+                                    {
+                                        junban = 'jigo'
+                                        time = 0
+                                        next = -1
+                                        kotoba = ''
+                                        yameruKazu = 0
+                                    }
+                                    else
+                                        sound(40, time / 8000, 400)
+                                    yameruKazu--
+                                }
+                                if(randomMessage === 11)
+                                {
+                                    kotoba += 'あん！'
+                                    kimochiyosa += 1
+                                    omorashi -= kimochiyosa / 1000 * 1
+                                    time = 400
+                                    halfTime = time * 1 / 4
+                                    if(0 >= yameruKazu)
+                                    {
+                                        junban = 'jigo'
+                                        time = 0
+                                        next = -1
+                                        kotoba = ''
+                                        yameruKazu = 0
+                                    }
+                                    else
+                                        sound(40, time / 8000, 400)
+                                    yameruKazu--
+                                }
+                                if(randomMessage === 12)
+                                {
+                                    kotoba += 'あん！'
+                                    kimochiyosa += 1
+                                    omorashi -= kimochiyosa / 1000 * 1
+                                    time = 400
+                                    halfTime = time * 1 / 4
+                                    if(0 >= yameruKazu)
+                                    {
+                                        junban = 'jigo'
+                                        time = 0
+                                        next = -1
+                                        kotoba = ''
+                                        yameruKazu = 0
+                                    }
+                                    else
+                                        sound(40, time / 8000, 400)
+                                    yameruKazu--
+                                }
+                                if(randomMessage === 13)
+                                {
+                                    kotoba += 'あん！'
+                                    kimochiyosa += 1
+                                    omorashi -= kimochiyosa / 1000 * 1
+                                    time = 400
+                                    halfTime = time * 1 / 4
+                                    if(0 >= yameruKazu)
+                                    {
+                                        junban = 'jigo'
+                                        time = 0
+                                        next = -1
+                                        kotoba = ''
+                                        yameruKazu = 0
+                                    }
+                                    else
+                                        sound(40, time / 8000, 400)
+                                    yameruKazu--
+                                }
+                                if(randomMessage === 14)
+                                {
+                                    kotoba += 'んああああああ！！'
+                                    kimochiyosa += 5
+                                    omorashi -= kimochiyosa / 1000 * 5
+                                    time = 1800
+                                    halfTime = time * 3 / 4
+                                    if(0 >= yameruKazu)
+                                    {
+                                        junban = 'jigo'
+                                        time = 0
+                                        next = -1
+                                        kotoba = ''
+                                        yameruKazu = 0
+                                    }
+                                    else
+                                        sound(20, time / 8000, 200)
+                                    yameruKazu--
+                                }
+                                if(randomMessage === 15)
+                                {
+                                    kotoba += 'んやああああああああ！！！'
+                                    kimochiyosa += 30
+                                    omorashi -= kimochiyosa / 1000 * 30
+                                    time = 9000
+                                    halfTime = time * 7 / 8
+                                    if(0 >= yameruKazu)
+                                    {
+                                        junban = 'jigo'
+                                        time = 0
+                                        next = -1
+                                        kotoba = ''
+                                        yameruKazu = 0
+                                    }
+                                    else
+                                        sound(20, time / 8000, 200)
                                     yameruKazu--
                                 }
                             }
@@ -1604,6 +1939,38 @@
                                 {
                                     kotoba = '搾り抜きのこわさがわかったかえ。'
                                 }
+                                else if(randomMessage === 8)
+                                {
+                                    kotoba = 'どうじゃったかの。やさしかったじゃろ。'
+                                }
+                                else if(randomMessage === 9)
+                                {
+                                    kotoba = 'どうじゃったかの。ゆっくりじゃったじゃろ。'
+                                }
+                                else if(randomMessage === 10)
+                                {
+                                    kotoba = 'デブなんて言うとこうじゃからの。わかったかえ。'
+                                }
+                                else if(randomMessage === 11)
+                                {
+                                    kotoba = 'ぐふふ、デブなんて言うからじゃぞ。わかったかの。'
+                                }
+                                else if(randomMessage === 12)
+                                {
+                                    kotoba = 'ぐふふ、もう言わないようにの。'
+                                }
+                                else if(randomMessage === 13)
+                                {
+                                    kotoba = 'わしの事をデブなんて言うからじゃ。'
+                                }
+                                else if(randomMessage === 14)
+                                {
+                                    kotoba = 'わしをデブなんて言うとこうなるからの。'
+                                }
+                                else if(randomMessage === 15)
+                                {
+                                    kotoba = 'ぐふふ どうじゃったかの。'
+                                }
                             }else if(next === 1){
                                 dare = 'hi'
                                 if(randomMessage === 0)
@@ -1637,6 +2004,38 @@
                                 else if(randomMessage === 7)
                                 {
                                     kotoba = 'ひ、ひいいいいい、おもらし しぼりぬかれた…。'
+                                }
+                                else if(randomMessage === 8)
+                                {
+                                    kotoba = 'やさしくても ねぶりかた きついようう…！'
+                                }
+                                else if(randomMessage === 9)
+                                {
+                                    kotoba = 'ゆっくりでも こすりかたが つよすぎるよう…！'
+                                }
+                                else if(randomMessage === 10)
+                                {
+                                    kotoba = 'ひうう、もうデブなんて言いません…。'
+                                }
+                                else if(randomMessage === 11)
+                                {
+                                    kotoba = 'やううん、もうデブなんて言わないです…。'
+                                }
+                                else if(randomMessage === 12)
+                                {
+                                    kotoba = 'はあ、はあ、デブなんて言ってごめんなさいい…。'
+                                }
+                                else if(randomMessage === 13)
+                                {
+                                    kotoba = 'あうう、デブなんて言わなきゃよかった…。'
+                                }
+                                else if(randomMessage === 14)
+                                {
+                                    kotoba = 'やううううん、もうだめえ…。'
+                                }
+                                else if(randomMessage === 15)
+                                {
+                                    kotoba = 'ひううううん…もうだめええ…。'
                                 }
                             }else{
                                 junban = 'shiteyarou'
