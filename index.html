@@ -6,7 +6,7 @@
             name="viewport"
             content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0"
         >
-        <title>おくちのなかで</title>
+        <title>1.0.0 - おくちのなかで</title>
 	    <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAAAXNSR0IArs4c6QAABTRJREFUeJztnVmymzAQRZtUtogXaS+SfKRUD/wYNPRwu9XnK3FiwLqHlsS4bNu2UTItf6w3ILElBZicFGBy/lpvgDbLsqiuD32INY0A2sET4YdPNIEAFsET+QifKLAAVsET+QmfKKAAlsET+QqfKNgsIMNvJ4wAGX4fIQTI8PtxL0CGP4ZrATL8cdzOArjCf7/fp5+/Xq/b70UIn8ipABzhXwVfQ5TwiRx2ARk+L24qgHTJryFa+EQOKsCyLBDhl22JBqwAnMETjYdfiCYBnADcwX/zer0eR/hP/x5JAogxAFKDPoVfWJYlxJjAXACU8GuD3xNBgsX6snAUAUbwLAHcGMAjniVOAZjwKkEKwIhHCVIAZrxJYD4L2LZNtdHWdT38/fP5NC/D86DvG4gKoNWg3+FfffaEt738DggBiOQluAt6ZglgBCCSk6Am4FklMD8QdEVP38yxnNnGBFAVwCueKwGsAD0l2RKvEsAKQJQSaAAtANG4BC3f5xh3eJMAXgAiHQm4Bp1EviSAnQVcMRLU1Xc5w9/joWndCVDoDe37e1LhF9Cb160AhdEAa68Ect5Ml7gYA9yxrqu72QIS7gUopAR9hBGAKCXoIZQARHIScEztau5J0CacAKjsg0eSIKQAaF3BWeAoEoQUAIm7oBEkSAEaaB0H1ARsLUEKIERLsJYSpAAC9ARqJUEKwMxIkBYShBRA8gTP3TiAI0BtCUIKYAFncJoShBNA+vTuGRKBaUkQTgBtWoJqPXOpIUEoAbT2/jIOaA3/7M9PSEsQRgDt0t8b/t1nHOtqJYQAFv1+LVz3JEpJ4F4Ar+G3/J+ChASuBbAM/2ndLcFaSuBWAO97/sh3OCVwKQBX+BIldeRaBAsJ3AkQNfyeZXD8BlcCoIW/3x7Oq5A0JXAjAFr4eyQuQdOSwIUAs4Xfs+ze3wYvAHL4GkhLAC2Ah/A1xJKUAFYAD+FrIiUBpAAZ/jkSEsAJkOHfwy0BlABew9deH6cEMAJ4Dd8KLgkgBLAKn+tVclZwSGAuQIY/xqgEpgJECt+y6xmRwEyASOEj0CuBiQAZvgw9EqgLkOHL0npySlWA6OGjTEFrJChtoiZA9PDRuJNg3yYqAnCE3/OELYvwn+4D0Hx+0dm6vtvE/DjAE72PVrPc85/uBLKS4KxNxJ8V3Lv3j/SnLeFL9NulSctvvwpc89L2q22ArABa4UvzVPK1KsHdekQF6DE8Svi1SEvwtHzICtCDx/ALUhLULFdMAK3+7f1+w4Xf81xhbglql2f+8uhe0ELnYF1Xlh2nRSYRAST3/ojB7xmVAPpQcA1XASOWeil6u4Ou9x9zHwdAvm37DMnj96NN29KWvdLAVYDkh9pQRwaQKQA4T+GOzh5SAAdchcwxdQw7BmjdDg9vD5V4HkE4AUbXz7393OfaPp8P60GjMAJwr5dreehvHA0xBpCQDu3FU1K4F0Cy4rAMssBfJe9aAI3uJnolcCsAwtU0EXArQMIDuwAae4vFTGPkdyGPA7ICTI6IAJJVwPJAU8SxQFaAyRETIOLeMgLqOCArwOSICpBV4AhiFcgKMDniAmQVOIJWBVQqQEpwBEkCtS4gJTiCIoHqGCAlOIIggfogUPspGehYS2A2C0gRfrCUwHwamCL8x0oCcwEKKYKNBOLPCJLA6nl8mmcitWKBqQDJkWVZVCqCSwEsbhO3ug5BWgSXAhDpSmB9txORnAhuHhEzQ79fQ5GAa4zgogJk+L/hqgjwFSDDv+dbgtbKAC+ANl6Cv6JViH9dkki8cIa8QwAAAABJRU5ErkJggg==">
         <style>
             /* 横長 */
@@ -1155,6 +1155,10 @@
                 // 舐めつくされた後
                 if(phase === 'finish')
                 {
+                    clear()
+                    drawHi(1, 34, 20)
+                    drawHo(1, 0)
+
                     if(time < 0) 
                     {
                         dare = finish[next].charactor
