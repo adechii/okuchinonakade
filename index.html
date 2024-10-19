@@ -176,7 +176,7 @@
             <canvas id="canvas" width="128" height="128"></canvas>
             <div id="voice">
                 おふとんメスドラさん の おくちのなかで、おもらしケモショタくん が がんばるよ！
-                <input id="start" type="button" value="たべてもらう">
+                <input id="start" type="button" value="やってもらう">
             </div>
             <div id="shiterukoto"></div>
             <div id="yameruniha"></div>
@@ -378,6 +378,7 @@
                     shi: 'もみ',
                     te: 'もんで',
                     tara: 'もんだら',
+                    cha: 'もんじゃ',
                     x0: 2,
                     y0: 1,
                     x1: 2,
@@ -391,6 +392,7 @@
                     shi: 'もみしだき',
                     te: 'もみしだいて',
                     tara: 'もみしだいたら',
+                    cha: 'もみしだいちゃ',
                     x0: 2,
                     y0: 1,
                     x1: 2,
@@ -404,6 +406,7 @@
                     shi: 'しごき',
                     te: 'しごいて',
                     tara: 'しごいたら',
+                    cha: 'しごいちゃ',
                     x0: 1,
                     y0: 2,
                     x1: 2,
@@ -417,6 +420,7 @@
                     shi: 'しごきあげ',
                     te: 'しごきあげて',
                     tara: 'しごきあげたら',
+                    cha: 'しごきあげちゃ',
                     x0: 1,
                     y0: 2,
                     x1: 2,
@@ -430,6 +434,7 @@
                     shi: 'こすり',
                     te: 'こすって',
                     tara: 'こすったら',
+                    cha: 'こすっちゃ',
                     x0: 1,
                     y0: 2,
                     x1: 3,
@@ -443,6 +448,7 @@
                     shi: 'こね',
                     te: 'こねて',
                     tara: 'こねたら',
+                    cha: 'こねちゃ',
                     x0: 3,
                     y0: 1,
                     x1: 1,
@@ -456,6 +462,7 @@
                     shi: 'こねくりまわし',
                     te: 'こねくりまわして',
                     tara: 'こねくりまわしたら',
+                    cha: 'こねくりまわしちゃ',
                     x0: 3,
                     y0: 1,
                     x1: 1,
@@ -469,6 +476,7 @@
                     shi: 'ねぶり',
                     te: 'ねぶって',
                     tara: 'ねぶったら',
+                    cha: 'ねぶっちゃ',
                     x0: 1,
                     y0: 3,
                     x1: 3,
@@ -482,6 +490,7 @@
                     shi: 'ねぶりもみ',
                     te: 'ねぶりもんで',
                     tara: 'ねぶりもんだら',
+                    cha: 'ねぶりもんじゃ',
                     x0: 1,
                     y0: 3,
                     x1: 3,
@@ -495,6 +504,7 @@
                     shi: 'しゃぶり',
                     te: 'しゃぶって',
                     tara: 'しゃぶったら',
+                    cha: 'しゃぶっちゃ',
                     x0: 1,
                     y0: 3,
                     x1: 3,
@@ -508,6 +518,7 @@
                     shi: 'しぼり',
                     te: 'しぼって',
                     tara: 'しぼったら',
+                    cha: 'しぼっちゃ',
                     x0: 1,
                     y0: 2,
                     x1: 3,
@@ -521,6 +532,7 @@
                     shi: 'しぼりだし',
                     te: 'しぼりだして',
                     tara: 'しぼりだしたら',
+                    cha: 'しぼりだしちゃ',
                     x0: 1,
                     y0: 2,
                     x1: 3,
@@ -534,6 +546,7 @@
                     shi: 'つぶし',
                     te: 'つぶして',
                     tara: 'つぶしたら',
+                    cha: 'つぶしちゃ',
                     x0: 2,
                     y0: 1,
                     x1: 2,
@@ -1138,7 +1151,7 @@
                                     kotoba += 
                                         kazu +
                                         joken + 
-                                        haya[hayaNum].sugiru + '舌使いで、'
+                                        haya[hayaNum].sugiru + 'やり方で、'
                                     time = 3000
                                     next++
                                 }
@@ -1210,14 +1223,7 @@
                                 next = 0
                             }
 
-                            if(hayaNum > 0)
-                            {
-                                time = haya[hayaNum].wait
-                            }
-                            else
-                            {
-                                time = haya[hayaNum].wait
-                            }
+                            time = haya[hayaNum].wait
 
                             kimochiyosa += menu[menuNum].heart
                             omorashi -= kimochiyosa / 1000 * menu[menuNum].power
@@ -1303,18 +1309,18 @@
                                     'するなあああ',
                                     'きもちいいい',
                                     'きもちいよう',
-                                    'したらこわれるうう',
-                                    'したらこわれゆうう',
-                                    'したらこわれちゃう',
-                                    'したらとろけるうう',
-                                    'したらとろけゆうう',
-                                    'したらとろけちゃう',
-                                    'したらもれちゃうう',
-                                    'したらもれるううう',
-                                    'したらもれゆううう',
+                                    'こわれるうう',
+                                    'こわれゆうう',
+                                    'こわれちゃう',
+                                    'とろけるうう',
+                                    'とろけゆうう',
+                                    'とろけちゃう',
+                                    'もれちゃうう',
+                                    'もれるううう',
+                                    'もれゆううう',
                                 ]
 
-                                d = menu[menuNum].sound + menu[menuNum].sound + damee[random(damee.length)]
+                                d = menu[menuNum].sound + menu[menuNum].sound + menu[menuNum].tara + damee[random(damee.length)]
                             }
                             else if(randomMessage === 4)
                             {
@@ -1359,12 +1365,34 @@
                                     'もれちゃうう',
                                     'もれるううう',
                                     'もれゆううう',
+                                    'んひいいいい',
+                                    'ひいいいいい',
                                 ]
-                                d = haya[hayaNum].te + damee[random(damee.length)]
+
+                                d = menu[menuNum].cha + damee[random(damee.length)]
                             }
                             else if(randomMessage === 7)
                             {
-                                d = menu[menuNum].sound + menu[menuNum].sound + haya[hayaNum].sugiru + 'ようう'
+                                const damee =
+                                [
+                                    'だめええええ',
+                                    'らえええええ',
+                                    'だえええええ',
+                                    'きもちいいい',
+                                    'きもちいよう',
+                                    'こわれるうう',
+                                    'こわれゆうう',
+                                    'こわれちゃう',
+                                    'とろけるうう',
+                                    'とろけゆうう',
+                                    'とろけちゃう',
+                                    'もれちゃうう',
+                                    'もれるううう',
+                                    'もれゆううう',
+                                    'んひいいいい',
+                                    'ひいいいいい',
+                                ]
+                                d = menu[menuNum].sound + menu[menuNum].sound + menu[menuNum].cha + damee[random(damee.length)]
                             }
 
                             kotoba = d + '…。'
@@ -1640,7 +1668,7 @@
                                         yameruKazu = 0
                                     }
                                     else
-                                        sound(70, time / 4000, 700)
+                                        sound(50, time / 4000, 500)
                                     yameruKazu--
                                 }
                                 if(randomMessage === 3)
@@ -1659,7 +1687,7 @@
                                         yameruKazu = 0
                                     }
                                     else
-                                        sound(60, time / 4000, 600)
+                                        sound(50, time / 4000, 500)
                                     yameruKazu--
                                 }
                                 if(randomMessage === 4)
@@ -2191,7 +2219,7 @@
                     {
                         omorashi /= 4
                         if(omorashi < 1 / 256) omorashi = 0
-                        kotoba = 'ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ！！！！！'
+                        kotoba = 'あああああああ！！！！！'
                         next++
                         time = 1000 + next * 100
                         nameTime = 0
