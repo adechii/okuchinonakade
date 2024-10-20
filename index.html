@@ -643,9 +643,6 @@
 
             let time = 0
             let halfTime = 0
-
-            drawHo(0, 0)
-            drawHi(0, 0, 96)
             
             let randomMessage
 
@@ -663,6 +660,9 @@
                 {
                     if(time < 0) 
                     {
+                        drawHo(0, 0)
+                        drawHi(0, 0, 96)
+
                         dare = start[next].charactor
                         kotoba = start[next].message
                         next++
