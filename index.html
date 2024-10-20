@@ -254,7 +254,7 @@
                 oscNode.frequency.linearRampToValueAtTime(1000, audioContext.currentTime + 0.1)
                 gainNode.gain.linearRampToValueAtTime(0, audioContext.currentTime + 0.1 - 0.01)
 
-                oscNode.start(0)
+                //oscNode.start(0)
 
                 startButton.className = 'none'
 
@@ -268,6 +268,7 @@
 
             const sound = (start, second, end) =>
             {
+                /*
                 oscNode.connect(gainNode).connect(audioContext.destination)
 
                 gainNode.gain.value = 0
@@ -277,6 +278,7 @@
                 oscNode.frequency.linearRampToValueAtTime(start, audioContext.currentTime + second * 4 / 8)
                 oscNode.frequency.linearRampToValueAtTime(end, audioContext.currentTime + second * 8 / 8)
                 gainNode.gain.linearRampToValueAtTime(0, audioContext.currentTime + second - 0.01)
+                */
             }
 
             const start =
@@ -1024,7 +1026,7 @@
                                 else if(next === 3)
                                 {
                                     kotoba +=
-                                        'どうなるかの。おいしいのを期待しておるぞ。'
+                                        'どうなるかの。気持ちよくて喘ぎ鳴くがよい。'
                                     time = 5000
                                     junban = 'namerare'
                                     next = 0
